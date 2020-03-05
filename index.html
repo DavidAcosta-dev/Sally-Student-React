@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sally-Student-REACT</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link href="main.css" rel="stylesheet"/>
+
+</head>
+<body>
+
+    <div id="application-root"></div>
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        const appRoot = document.querySelector('#application-root');
+
+        function App(props){
+            console.log(props);
+            return (
+                <div className="parent-div">
+                    <header className="resume-header">
+                        <h1>{props.myName}</h1>
+                        <img className="profile-pic" src="images/frog.png"></img>
+                    </header>
+                    <main>
+                        <section>
+                            <h2>Work History</h2>
+                            <ul>
+                                
+                                        <li><h3>Ribbet Roast House</h3></li>
+                                        <li>2019-current</li>
+                                        <li>Barista: Made delicious specialty gourmet drinks for all the woodland folk.</li>
+                                
+                                        <li><h3>iHop</h3></li>
+                                        <li>2018-2019</li>
+                                        <li>Busser: Cleaned tables and maintained the ice wells full.</li>
+        
+                            </ul>
+                        </section>
+                        <section>
+                            <h2 >Education</h2>
+                            
+                            <ul>
+                                <li><h3>Leap Frog Cyber School of Hopology</h3></li>
+                                <li>class: 2019</li>
+                                <li>major: Leap-Physics</li>
+                                <li>minor: Aquatics</li>
+                                <li>gpa: 2.5</li>
+                                <li>degree:A.A. Hopology</li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h2>Contact Me</h2>
+                            <ul>
+                                <li>email: <a href="mailto:ribby@gmail.com?subject=HireMe">ribby@gmail.com</a></li>
+                                <li>phone#: 714-555-5555</li>
+                                <li><address>4245 West Lillypad way, RiverRun, Brea, C.A. 90501</address></li>
+                            </ul>
+                        </section>
+
+                    </main>
+                </div>
+            )
+        }
+
+        ReactDOM.render(
+            <App myName="Ribby"/>, appRoot);
+
+    </script>
+    
+</body>
+</html>
